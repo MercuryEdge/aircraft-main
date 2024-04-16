@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'CFM56航空涡扇发动机维修仿真教学系统',
+  title: '飞机结构与系统(CFM56发动机)虚拟仿真教学平台',
 
   /**
    * @type {boolean} true | false

@@ -9,8 +9,10 @@
       label-position="left"
     >
       <div class="title-container">
-        <h1>飞机结构与系统（CFM56发动机）虚拟仿真教学平台</h1>
+        <center>
+        <h1>飞机结构与系统(CFM56发动机)<br/>虚拟仿真教学平台</h1>
         <h3 class="title">用户登录</h3>
+        </center>
       </div>
       <el-form-item prop="username">
         <span class="svg-container">
@@ -58,10 +60,10 @@
         @click.native.prevent="handleLogin"
       >登录</el-button>
       <div class="tips">
-        <el-link type="primary" @click="openRegisterForm">注册成为新用户</el-link>
-        <el-link type="warning" style="float: right;" @click="openForgetForm">忘记密码</el-link>
-        <!-- <span style="margin-right:20px;">用户名: admin</span>
-        <span> 密码: 123456</span> -->
+        <!-- <el-link type="primary" @click="openRegisterForm">注册成为新用户</el-link>
+        <el-link type="warning" style="float: right;" @click="openForgetForm">忘记密码</el-link> -->
+        <span style="margin-right:20px;">用户名: demo</span>
+        <span> 密码: 123456</span>
       </div>
     </el-form>
     <!-- 用户信息编辑对话框 -->
