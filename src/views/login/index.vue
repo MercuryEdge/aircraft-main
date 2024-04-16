@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h1>CFM56航空涡扇发动机维修仿真教学系统</h1>
+        <h1>飞机结构与系统（CFM56发动机）虚拟仿真教学平台</h1>
         <h3 class="title">用户登录</h3>
       </div>
       <el-form-item prop="username">

@@ -1,13 +1,14 @@
 <template>
   <div class="navbar">
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar"/> -->
+    <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar"/> -->
 
-    <!-- <!-- <breadcrumb class="breadcrumb-container" /> -->
+    <!--  <breadcrumb class="breadcrumb-container" /> -->
 
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <img :src="basePath+avatar" class="user-avatar">
+          <!-- <img :src="basePath+avatar" class="user-avatar"> -->
+          <i class="el-icon-user"/>
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
@@ -16,14 +17,15 @@
               系统首页
             </el-dropdown-item>
           </router-link>
-          <router-link to="/main/reset">
+          <!-- <router-link to="/main/reset">
             <el-dropdown-item>
               用户信息
             </el-dropdown-item>
-          </router-link>
-          <!-- <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-            <el-dropdown-item>外部链接</el-dropdown-item>
-          </a> -->
+          </router-link> -->
+
+          <a target="_blank" href="https://github.com/MercuryEdge/aircraft-main">
+            <el-dropdown-item>项目链接</el-dropdown-item>
+          </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">注销登录</span>
           </el-dropdown-item>
@@ -76,6 +78,11 @@ export default {
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
 
+  .el-icon-user{
+    &:hover{
+      cursor: pointer;
+    }
+  }
   .hamburger-container {
     line-height: 46px;
     height: 100%;

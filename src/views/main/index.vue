@@ -254,7 +254,7 @@
     </div>
     <el-card style="background-color: cornflowerblue;">
       <div style="text-align: center;color: aliceblue;">
-        <h2>CFM56航空涡扇发动机维修仿真教学系统</h2>
+        <h2>飞机结构与系统（CFM56发动机）虚拟仿真教学平台</h2>
       </div>
     </el-card>
     <el-backtop />
