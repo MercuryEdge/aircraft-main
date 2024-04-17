@@ -64,6 +64,8 @@
         <el-link type="warning" style="float: right;" @click="openForgetForm">忘记密码</el-link> -->
         <span style="margin-right:20px;">用户名: demo</span>
         <span> 密码: 123456</span>
+        <span><el-link type="primary" href="https://github.com/MercuryEdge/aircraft-main" target="_blank">项目链接</el-link></span>
+        
       </div>
     </el-form>
     <!-- 用户信息编辑对话框 -->
@@ -259,7 +261,7 @@ $cursor: #464646;
 </style>
 
 <style lang="scss" scoped>
-$bg: #3a1176;
+$bg: #0960bc;
 $dark_gray: #889aa4;
 $light_gray: #eee;
 
