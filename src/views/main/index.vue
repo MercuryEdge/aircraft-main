@@ -3,7 +3,7 @@
     <div>
       <el-carousel indicator-position="outside" height="500px" :interval="3000">
         <el-carousel-item v-for="item in imgList" :key="item.src">
-          <el-image style="width: 100vw;height: 500px;" :src="baseUrl + item.src" fit="cover" />
+          <el-image style="width: 100vw;height: 500px;" :src="item.src" fit="cover" />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -274,7 +274,7 @@ export default {
       pptUrl: '%5C%5CWIN-6F1F6AM4VTK%5Cppt%5C', // 虚拟机中存放PPT文件夹的网络路径
       u3dUrl: 'http://172.20.10.5:100/caucd/bjsb', // 虚拟机中存放u3d的路径
       baseUrl: process.env.VUE_APP_BASE_API,
-      imgList: [{ src: '/slogans/1-slogan.jpg' }, { src: '/slogans/2-slogan.jpg' }, { src: '/slogans/3-slogan.jpg' }],
+      imgList: [{ src: require('@/assets/bg/1.jpg') }, { src: require('@/assets/bg/2.jpg') }, { src: require('@/assets/bg/3.jpg') }],
       formLabelWidth: '130px',
       totalPPT: 0,
       totalBook: 0,
@@ -397,7 +397,7 @@ export default {
     },
     exl(path) {
       window.open(path, '_blank')
-      console.log(path)
+      // console.log(path)
     }
   }
 }
