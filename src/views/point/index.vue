@@ -38,8 +38,9 @@
             <img
               class="card-img-ppt"
               :src="baseUrl + '/covers/' + file.filecover"
-              @click="exl(serverUrl + shareUrl + file.fileuuid)"
+              @click="exl(serverUrl + shareUrl)"
             >
+            <!-- @click="exl(serverUrl + shareUrl + file.fileuuid)" -->
             <div style="text-align: center;" @click="exl(serverUrl + shareUrl + file.fileuuid)">
               <div class="fileNameDiv">
                 <h3>{{ file.filename }}</h3>
@@ -58,8 +59,8 @@ import fileApi from '@/api/fileManage'
 export default {
   data() {
     return {
-      serverUrl: 'http://172.20.10.5/op/view.aspx?src=', // 虚拟机的IP地址
-      shareUrl: '%5C%5CWIN-6F1F6AM4VTK%5Cppt%5C', // 虚拟机中存放PPT文件夹的网络路径
+      serverUrl: 'https://view.officeapps.live.com/op/view.aspx?src=', // 虚拟机的IP地址
+      shareUrl: 'http%3a%2f%2fvideo.ch9.ms%2fbuild%2f2011%2fslides%2fTOOL-532T_Sutter.pptx', // 虚拟机中存放PPT文件夹的网络路径
       baseUrl: process.env.VUE_APP_BASE_API,
       totalPPT: 0,
       searchModelPPT: {
@@ -88,6 +89,8 @@ export default {
       }
     },
     exl(path) {
+      // this.$router.push('../pg/index')
+      // window.open('../pg/index')
       window.open(path, '_blank')
       console.log(path)
     }

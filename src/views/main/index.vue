@@ -45,9 +45,11 @@
               <img
                 class="card-img-wide"
                 :src="baseUrl + '/covers/' + file.filecover"
-                @click="exl(serverUrl+shareUrl+pptUrl + file.fileuuid)"
+                @click="exl(ppt_serverUrl+shareUrl+pptUrl)"
               >
-              <div style="text-align: center;" @click="exl(serverUrl+shareUrl+ pptUrl + file.fileuuid)">
+              <!-- @click="exl(serverUrl+shareUrl+pptUrl + file.fileuuid)" -->
+              <div style="text-align: center;" @click="exl(ppt_serverUrl+shareUrl+ pptUrl)">
+              <!-- <div style="text-align: center;" @click="exl(ppt_serverUrl+shareUrl+ pptUrl + file.fileuuid)"> -->
                 <div class="fileNameDiv">
                   <h3>{{ file.filename }}</h3>
                 </div>
@@ -270,8 +272,11 @@ export default {
     return {
       show: false,
       serverUrl: 'http://172.20.10.5', // 虚拟机的IP地址
+      ppt_serverUrl: 'https://view.officeapps.live.com', // 虚拟机的IP地址
       shareUrl: '/op/view.aspx?src=', // OfficeOnlineServer索引PPT的路径，不必修改
-      pptUrl: '%5C%5CWIN-6F1F6AM4VTK%5Cppt%5C', // 虚拟机中存放PPT文件夹的网络路径
+      // pptUrl: '%5C%5CWIN-6F1F6AM4VTK%5Cppt%5C', // 虚拟机中存放PPT文件夹的网络路径
+      pptUrl: 'http%3a%2f%2fvideo.ch9.ms%2fbuild%2f2011%2fslides%2fTOOL-532T_Sutter.pptx', // 虚拟机中存放PPT文件夹的网络路径
+      
       u3dUrl: 'http://172.20.10.5:100/caucd/bjsb', // 虚拟机中存放u3d的路径
       baseUrl: process.env.VUE_APP_BASE_API,
       imgList: [{ src: require('@/assets/bg/1.jpg') }, { src: require('@/assets/bg/2.jpg') }, { src: require('@/assets/bg/3.jpg') }],
